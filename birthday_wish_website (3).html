@@ -1,0 +1,3681 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f6f0e8">
+<title>For Her — Chapter 22 ✦</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+:root {
+    --ink: #17141a;
+    --paper: #f6f0e8;
+    --cream: #fffaf4;
+    --rose: #c95d78;
+    --rose2: #f1a0b2;
+    --wine: #5c2035;
+    --gold: #b78a45;
+    --soft: #eadbd0;
+    --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .16;
+    z-index: 90;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ============================================================
+   CUSTOM CURSOR
+============================================================ */
+
+.cursor-dot {
+    position: fixed;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--rose);
+    pointer-events: none;
+    z-index: 100;
+    mix-blend-mode: multiply;
+    transform: translate(-50%, -50%);
+    transition: width .2s, height .2s;
+}
+
+
+/* ============================================================
+   PROGRESS
+============================================================ */
+
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--rose);
+    width: 0;
+    z-index: 300;
+}
+
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+
+nav {
+    position: fixed;
+    z-index: 80;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%);
+    width: min(92%, 1180px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 18px;
+
+    border: 1px solid #0001;
+    background: #f8f0e9d9;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-radius: 999px;
+    box-shadow: 0 12px 40px #5c203514;
+}
+
+.logo {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--rose);
+}
+
+.navlinks {
+    display: flex;
+    gap: 22px;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #665d61;
+}
+
+.navlinks a {
+    text-decoration: none;
+    transition: .2s;
+}
+
+.navlinks a:hover {
+    color: var(--rose);
+}
+
+.navbtn {
+    border: 0;
+    background: var(--wine);
+    color: white;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.navbtn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 150px 6vw 8vh;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            #efe2d7,
+            #f9f5ef 50%,
+            #ead9d3
+        );
+}
+
+.hero::before {
+    content: "22";
+    position: absolute;
+    right: 3vw;
+    top: 5vh;
+
+    font:
+        700 clamp(15rem, 42vw, 45rem)/1
+        "Cormorant Garamond";
+
+    color: #ffffff55;
+    letter-spacing: -.1em;
+}
+
+.hero-photo {
+    position: absolute;
+
+    right: 8vw;
+    top: 18%;
+
+    width: min(35vw, 480px);
+    height: min(62vh, 680px);
+
+    border-radius: 240px 240px 25px 25px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d9c0bd,
+            #f4e8df
+        );
+
+    box-shadow: 25px 30px 70px #5c203525;
+
+    transform: rotate(4deg);
+
+    cursor: pointer;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-photo .ph {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #856d72;
+    padding: 30px;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 3;
+    max-width: 760px;
+}
+
+.kicker {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .72rem;
+    color: var(--wine);
+    font-weight: 700;
+}
+
+h1 {
+    font:
+        700 clamp(5rem, 12vw, 11rem)/.72
+        "Cormorant Garamond";
+
+    letter-spacing: -.06em;
+    margin: 25px 0;
+
+    color: var(--wine);
+}
+
+.hero-copy p {
+    max-width: 580px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #675d61;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.btn {
+    border: 1px solid #5c203522;
+    background: #fff7;
+    color: var(--wine);
+
+    padding: 14px 19px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px #5c20351c;
+}
+
+.btn.dark {
+    background: var(--wine);
+    color: #fff;
+}
+
+
+/* ============================================================
+   MARQUEE
+============================================================ */
+
+.marquee {
+    background: var(--wine);
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0;
+}
+
+.track {
+    display: inline-block;
+
+    animation: marquee 22s linear infinite;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.track span {
+    margin: 0 25px;
+    color: var(--rose2);
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* ============================================================
+   GENERAL SECTIONS
+============================================================ */
+
+.section {
+    padding: 135px 6vw;
+}
+
+.section.narrow {
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.eyebrow {
+    color: var(--rose);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+.display {
+    font:
+        700 clamp(3.5rem, 7vw, 7rem)/.88
+        "Cormorant Garamond";
+
+    color: var(--wine);
+    margin: 18px 0;
+}
+
+.lead {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #655b5f;
+}
+
+.bigquote {
+    font:
+        600 clamp(2rem, 4vw, 4.2rem)/1.05
+        "Cormorant Garamond";
+
+    color: var(--wine);
+    margin: 0;
+}
+
+
+/* ============================================================
+   CHAPTERS
+============================================================ */
+
+.chapter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.chapter.reverse .chapter-copy {
+    order: 2;
+}
+
+.chapter-image {
+    min-height: 600px;
+
+    border-radius: 260px 260px 20px 20px;
+
+    overflow: hidden;
+
+    background: #e4d2cc;
+
+    box-shadow: 0 30px 70px #5c20351b;
+
+    cursor: pointer;
+}
+
+.chapter-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+
+    object-fit: cover;
+}
+
+.chapter-image .ph {
+    height: 600px;
+
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+
+    color: #896f75;
+    padding: 30px;
+}
+
+.chapter-copy h2 {
+    font:
+        700 clamp(3rem, 6vw, 6rem)/.88
+        "Cormorant Garamond";
+
+    color: var(--wine);
+    margin: 15px 0;
+}
+
+.chapter-copy p {
+    color: #655b5f;
+    line-height: 1.9;
+    font-size: 1.03rem;
+}
+
+.number {
+    font:
+        700 5rem/1
+        "Cormorant Garamond";
+
+    color: #d5b8a9;
+}
+
+
+/* ============================================================
+   GALLERY
+============================================================ */
+
+.polaroids {
+    background: #eee4dc;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.memory-card {
+    background: #fff;
+
+    padding: 13px 13px 28px;
+
+    box-shadow: 0 20px 35px #00000010;
+
+    transition: .35s;
+
+    cursor: pointer;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px) rotate(0deg) !important;
+    box-shadow: 0 30px 50px #0002;
+}
+
+.memory-card:nth-child(1) {
+    grid-column: span 7;
+    transform: rotate(-2deg);
+}
+
+.memory-card:nth-child(2) {
+    grid-column: span 5;
+    margin-top: 80px;
+    transform: rotate(3deg);
+}
+
+.memory-card:nth-child(3) {
+    grid-column: span 4;
+    margin-top: -30px;
+    transform: rotate(2deg);
+}
+
+.memory-card:nth-child(4) {
+    grid-column: span 8;
+    transform: rotate(-1deg);
+}
+
+.memory-card:nth-child(5) {
+    grid-column: span 6;
+    margin-left: 9%;
+    transform: rotate(2deg);
+}
+
+.memory-card:nth-child(6) {
+    grid-column: span 6;
+    transform: rotate(-2deg);
+}
+
+.memory-card .photo {
+    height: 420px;
+    background: #e6d8d0;
+    overflow: hidden;
+}
+
+.memory-card.small .photo {
+    height: 300px;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ph {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #8b7277;
+}
+
+.caption {
+    padding-top: 16px;
+
+    font:
+        600 1.35rem
+        "Cormorant Garamond";
+
+    color: var(--wine);
+}
+
+.date {
+    font-size: .68rem;
+    letter-spacing: 2px;
+    color: #9a8588;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+
+/* ============================================================
+   TIMELINE
+============================================================ */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: #d2b4ad;
+}
+
+.event {
+    display: grid;
+
+    grid-template-columns: 1fr 60px 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+
+    margin: 70px 0;
+}
+
+.event:nth-child(even) .event-card {
+    grid-column: 3;
+}
+
+.event-card {
+    padding: 28px;
+
+    background: #fff8;
+
+    border: 1px solid #0000000b;
+
+    box-shadow: 0 15px 40px #5c203510;
+}
+
+.event-dot {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--rose);
+
+    border: 5px solid var(--paper);
+
+    box-shadow: 0 0 0 1px #c95d78;
+
+    justify-self: center;
+
+    z-index: 2;
+}
+
+.event h3 {
+    font:
+        700 2rem
+        "Cormorant Garamond";
+
+    margin: 0;
+
+    color: var(--wine);
+}
+
+.event p {
+    line-height: 1.7;
+    color: #706468;
+    margin-bottom: 0;
+}
+
+
+/* ============================================================
+   REASONS
+============================================================ */
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.reason {
+    min-height: 210px;
+
+    padding: 25px;
+
+    border: 1px solid #00000010;
+
+    background: #fff8;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+.reason:hover {
+    transform: translateY(-8px);
+    background: #fff;
+}
+
+.reason span {
+    font:
+        700 2.7rem
+        "Cormorant Garamond";
+
+    color: #d6b6ad;
+}
+
+.reason h3 {
+    font:
+        600 1.4rem
+        "Cormorant Garamond";
+
+    color: var(--wine);
+}
+
+.reason p {
+    color: #766b6e;
+    line-height: 1.55;
+    font-size: .9rem;
+}
+
+
+/* ============================================================
+   LETTER
+============================================================ */
+
+.letter-section {
+    background: var(--wine);
+    color: #fff;
+}
+
+.letter {
+    max-width: 900px;
+
+    margin: auto;
+
+    border: 1px solid #fff3;
+
+    padding: clamp(35px, 7vw, 80px);
+
+    position: relative;
+
+    background: #fff7;
+}
+
+.letter::before {
+    content: "“";
+
+    position: absolute;
+
+    right: 35px;
+    top: -40px;
+
+    font:
+        12rem/1
+        "Cormorant Garamond";
+
+    color: #ffffff10;
+}
+
+.letter h2 {
+    font:
+        700 clamp(3rem, 6vw, 6rem)/.9
+        "Cormorant Garamond";
+
+    margin: 0 0 30px;
+}
+
+.letter p {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: #eee4e5;
+}
+
+.signature {
+    font:
+        600 2rem
+        "Cormorant Garamond";
+
+    color: #f1a0b2;
+
+    margin-top: 35px;
+}
+
+
+/* ============================================================
+   SECRET
+============================================================ */
+
+.secret {
+    background: #ead7d3;
+
+    text-align: center;
+
+    min-height: 75vh;
+    min-height: 75svh;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+}
+
+.secret-inner {
+    max-width: 850px;
+}
+
+.envelope {
+    font-size: 7rem;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    transition: .4s;
+}
+
+.envelope:hover {
+    transform: scale(1.1) rotate(-4deg);
+}
+
+.secret h2 {
+    font:
+        700 clamp(4rem, 8vw, 8rem)/.8
+        "Cormorant Garamond";
+
+    color: var(--wine);
+
+    margin: 20px 0;
+}
+
+.secret-message {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: 1.2s;
+}
+
+.secret-message.open {
+    max-height: 500px;
+}
+
+.secret-message p {
+    font:
+        600 clamp(1.7rem, 4vw, 3.5rem)/1.15
+        "Cormorant Garamond";
+
+    color: var(--wine);
+}
+
+
+/* ============================================================
+   FINAL
+============================================================ */
+
+.final {
+    background: #20141a;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 160px 6vw;
+}
+
+.final h2 {
+    font:
+        700 clamp(5rem, 13vw, 12rem)/.7
+        "Cormorant Garamond";
+
+    margin: 0;
+
+    color: #f7dfe4;
+}
+
+.final p {
+    max-width: 600px;
+
+    margin: 40px auto;
+
+    color: #cbbbc0;
+
+    line-height: 1.8;
+}
+
+.final .btn {
+    background: #f7dfe4;
+    color: var(--wine);
+    border: 0;
+}
+
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 200;
+
+    background: #000d;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    box-shadow: 0 30px 100px #000;
+}
+
+.close {
+    position: absolute;
+
+    right: 30px;
+    top: 20px;
+
+    color: #fff;
+
+    font-size: 2.5rem;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   CELEBRATION
+============================================================ */
+
+#fx {
+    position: fixed;
+    inset: 0;
+
+    z-index: 150;
+
+    pointer-events: none;
+}
+
+.celebration {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 140;
+
+    background: #20141af5;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.celebration.active {
+    display: flex;
+}
+
+.celebration h2 {
+    font:
+        700 clamp(5rem, 13vw, 13rem)/.7
+        "Cormorant Garamond";
+
+    color: #f7dfe4;
+
+    position: relative;
+
+    z-index: 4;
+
+    animation: bounce 1s infinite alternate;
+}
+
+.party {
+    position: absolute;
+
+    font-size: clamp(2rem, 7vw, 7rem);
+
+    animation: dance 1s ease-in-out infinite alternate;
+}
+
+.p1 {
+    left: 6%;
+    top: 18%;
+}
+
+.p2 {
+    left: 20%;
+    bottom: 12%;
+    animation-delay: .2s;
+}
+
+.p3 {
+    right: 8%;
+    top: 15%;
+    animation-delay: .4s;
+}
+
+.p4 {
+    right: 22%;
+    bottom: 16%;
+    animation-delay: .1s;
+}
+
+.p5 {
+    left: 45%;
+    top: 8%;
+    animation-delay: .5s;
+}
+
+.p6 {
+    right: 45%;
+    bottom: 8%;
+    animation-delay: .7s;
+}
+
+.p7 {
+    left: 4%;
+    bottom: 42%;
+    animation-delay: .3s;
+}
+
+.p8 {
+    right: 4%;
+    bottom: 45%;
+    animation-delay: .6s;
+}
+
+@keyframes dance {
+    to {
+        transform:
+            translateY(-35px)
+            rotate(15deg)
+            scale(1.2);
+    }
+}
+
+@keyframes bounce {
+    to {
+        transform:
+            scale(1.04)
+            rotate(-1deg);
+    }
+}
+
+
+/* ============================================================
+   TOAST
+============================================================ */
+
+.toast {
+    position: fixed;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translate(-50%, 20px);
+
+    opacity: 0;
+
+    z-index: 300;
+
+    background: var(--wine);
+    color: #fff;
+
+    padding: 12px 18px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.toast.show {
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* ============================================================
+   REVEAL
+============================================================ */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: .9s;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: none;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 850px) {
+
+    .cursor-dot {
+        display: none;
+    }
+
+    nav {
+        top: 10px;
+
+        width: calc(100% - 24px);
+
+        padding: 10px 12px 10px 16px;
+
+        border-radius: 22px;
+
+        min-height: 52px;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    .navbtn {
+        padding: 9px 14px;
+        font-size: .78rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        padding:
+            calc(100px + env(safe-area-inset-top))
+            20px
+            45px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-end;
+
+        align-items: stretch;
+
+        background:
+            radial-gradient(
+                circle at 80% 25%,
+                #ffffffaa,
+                transparent 35%
+            ),
+            linear-gradient(
+                150deg,
+                #eee0d6,
+                #faf6f0 60%,
+                #ead8d3
+            );
+    }
+
+    .hero::before {
+        right: -15vw;
+
+        top: 12vh;
+
+        font-size: 55vw;
+
+        opacity: .45;
+    }
+
+    .hero-photo {
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        width: min(78vw, 310px);
+
+        height: min(58vh, 430px);
+
+        margin: 0 auto 38px;
+
+        border-radius:
+            160px
+            160px
+            24px
+            24px;
+
+        transform: rotate(2deg);
+
+        box-shadow:
+            15px
+            20px
+            45px
+            #5c203525;
+
+        flex-shrink: 0;
+    }
+
+    .hero-copy {
+        max-width: 100%;
+    }
+
+    .kicker {
+        font-size: .62rem;
+
+        letter-spacing: 2.2px;
+
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: clamp(4.4rem, 19vw, 6rem);
+
+        line-height: .72;
+
+        letter-spacing: -.065em;
+
+        margin: 18px 0 24px;
+    }
+
+    .hero-copy p {
+        font-size: .94rem;
+
+        line-height: 1.75;
+
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        width: 100%;
+
+        margin-top: 22px;
+
+        gap: 9px;
+    }
+
+    .btn {
+        min-height: 48px;
+
+        padding: 13px 16px;
+
+        font-size: .82rem;
+
+        border-radius: 12px;
+    }
+
+    .hero-actions .btn {
+        flex: 1;
+    }
+
+
+    /* MARQUEE */
+
+    .marquee {
+        padding: 11px 0;
+    }
+
+    .track {
+        font-size: 1.15rem;
+
+        animation-duration: 18s;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 90px 20px;
+    }
+
+    .section.narrow {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .intro,
+    .chapter {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .display {
+        font-size:
+            clamp(3.2rem, 15vw, 5rem);
+
+        line-height: .86;
+
+        margin-top: 14px;
+    }
+
+    .bigquote {
+        font-size:
+            clamp(1.8rem, 8vw, 3rem);
+
+        line-height: 1.05;
+    }
+
+    .lead {
+        font-size: .98rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* CHAPTER */
+
+    .chapter.reverse .chapter-copy {
+        order: 0;
+    }
+
+    .chapter-image,
+    .chapter-image img,
+    .chapter-image .ph {
+        min-height: 0;
+
+        height: 480px;
+    }
+
+    .chapter-image {
+        border-radius:
+            180px
+            180px
+            20px
+            20px;
+    }
+
+    .chapter-copy h2 {
+        font-size:
+            clamp(3rem, 14vw, 5rem);
+
+        line-height: .86;
+
+        margin: 12px 0 20px;
+    }
+
+    .chapter-copy p {
+        font-size: .96rem;
+
+        line-height: 1.8;
+    }
+
+    .number {
+        font-size: 4rem;
+    }
+
+
+    /* GALLERY */
+
+    .polaroids {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .photo-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .memory-card,
+    .memory-card:nth-child(n) {
+        grid-column: 1;
+
+        margin: 0;
+
+        transform: none;
+
+        padding: 10px 10px 22px;
+    }
+
+    .memory-card:hover {
+        transform: none !important;
+    }
+
+    .memory-card .photo,
+    .memory-card.small .photo {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 4 / 5;
+    }
+
+    .caption {
+        font-size: 1.25rem;
+
+        padding-top: 13px;
+    }
+
+    .date {
+        font-size: .58rem;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* TIMELINE */
+
+    .timeline {
+        width: 100%;
+
+        margin-top: 45px;
+    }
+
+    .timeline::before {
+        left: 9px;
+
+        width: 1px;
+    }
+
+    .event {
+        display: grid;
+
+        grid-template-columns: 20px 1fr;
+
+        gap: 16px;
+
+        margin: 35px 0;
+
+        align-items: start;
+    }
+
+    .event > div:first-child {
+        display: none;
+    }
+
+    .event-dot {
+        grid-column: 1;
+
+        grid-row: 1;
+
+        width: 18px;
+
+        height: 18px;
+
+        margin-top: 4px;
+    }
+
+    .event-card,
+    .event:nth-child(even) .event-card {
+        grid-column: 2;
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .event h3 {
+        font-size: 1.8rem;
+
+        line-height: 1;
+    }
+
+    .event p {
+        font-size: .9rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* REASONS */
+
+    .reasons {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .reason {
+        min-height: 190px;
+
+        padding: 18px 15px;
+    }
+
+    .reason span {
+        font-size: 2.2rem;
+    }
+
+    .reason h3 {
+        font-size: 1.25rem;
+
+        line-height: 1.05;
+
+        margin: 10px 0;
+    }
+
+    .reason p {
+        font-size: .78rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* LETTER */
+
+    .letter {
+        padding: 34px 24px;
+    }
+
+    .letter h2 {
+        font-size:
+            clamp(3rem, 14vw, 5rem);
+
+        line-height: .88;
+    }
+
+    .letter p {
+        font-size: .94rem;
+
+        line-height: 1.8;
+    }
+
+    .signature {
+        font-size: 1.8rem;
+    }
+
+
+    /* SECRET */
+
+    .secret {
+        min-height: 80svh;
+
+        padding:
+            80px
+            20px;
+    }
+
+    .envelope {
+        font-size: 5.5rem;
+    }
+
+    .secret h2 {
+        font-size:
+            clamp(4rem, 17vw, 6rem);
+
+        line-height: .78;
+    }
+
+    .secret-message p {
+        font-size:
+            clamp(1.6rem, 7vw, 2.5rem);
+
+        line-height: 1.1;
+    }
+
+
+    /* FINAL */
+
+    .final {
+        padding:
+            120px
+            20px;
+    }
+
+    .final h2 {
+        font-size:
+            clamp(4.5rem, 19vw, 7rem);
+
+        line-height: .72;
+    }
+
+    .final p {
+        font-size: .92rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* LIGHTBOX */
+
+    .lightbox {
+        padding:
+            calc(20px + env(safe-area-inset-top))
+            15px
+            calc(20px + env(safe-area-inset-bottom));
+    }
+
+    .lightbox img {
+        max-width: 94vw;
+
+        max-height: 82vh;
+
+        border-radius: 6px;
+    }
+
+    .close {
+        right: 18px;
+
+        top:
+            calc(
+                10px +
+                env(safe-area-inset-top)
+            );
+
+        font-size: 2.2rem;
+
+        padding: 10px;
+    }
+
+
+    /* CELEBRATION */
+
+    .celebration {
+        padding:
+            30px
+            20px
+            calc(
+                30px +
+                env(safe-area-inset-bottom)
+            );
+    }
+
+    .celebration h2 {
+        font-size:
+            clamp(4.5rem, 20vw, 8rem);
+
+        line-height: .72;
+    }
+
+    .party {
+        font-size:
+            clamp(2rem, 11vw, 4rem);
+    }
+
+
+    /* TOAST */
+
+    .toast {
+        width: max-content;
+
+        max-width:
+            calc(100% - 30px);
+
+        text-align: center;
+
+        font-size: .8rem;
+
+        bottom:
+            calc(
+                18px +
+                env(safe-area-inset-bottom)
+            );
+    }
+}
+
+
+/* ============================================================
+   IPHONE 13 / SMALL PHONES
+============================================================ */
+
+@media (max-width: 430px) {
+
+    nav {
+        width: calc(100% - 20px);
+    }
+
+    .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-photo {
+        width: 74vw;
+
+        height: 48vh;
+
+        max-height: 410px;
+
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size:
+            clamp(4rem, 20vw, 5.3rem);
+    }
+
+    .hero-copy p {
+        font-size: .88rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+
+        flex: none;
+    }
+
+    .section {
+        padding-top: 78px;
+
+        padding-bottom: 78px;
+    }
+
+    .display {
+        font-size:
+            clamp(3rem, 15vw, 4.5rem);
+    }
+
+    .chapter-image,
+    .chapter-image img,
+    .chapter-image .ph {
+        height: 430px;
+    }
+
+    .chapter-image {
+        border-radius:
+            150px
+            150px
+            18px
+            18px;
+    }
+
+    .photo-grid {
+        gap: 22px;
+    }
+
+    .memory-card {
+        padding: 8px 8px 19px;
+    }
+
+    .memory-card .photo,
+    .memory-card.small .photo {
+        aspect-ratio: 4 / 5;
+    }
+
+    .caption {
+        font-size: 1.15rem;
+    }
+
+    .reasons {
+        gap: 8px;
+    }
+
+    .reason {
+        min-height: 175px;
+
+        padding: 15px 13px;
+    }
+
+    .reason span {
+        font-size: 2rem;
+    }
+
+    .reason h3 {
+        font-size: 1.15rem;
+    }
+
+    .reason p {
+        font-size: .74rem;
+    }
+
+    .letter {
+        padding: 30px 20px;
+    }
+
+    .letter h2 {
+        font-size: 3.5rem;
+    }
+
+    .secret {
+        min-height: 75svh;
+    }
+
+    .final {
+        padding:
+            100px
+            18px;
+    }
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES
+============================================================ */
+
+@media (max-width: 360px) {
+
+    nav {
+        width: calc(100% - 16px);
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .navbtn {
+        padding: 8px 11px;
+    }
+
+    .hero-photo {
+        height: 390px;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .reason {
+        min-height: auto;
+    }
+}
+
+
+/* ============================================================
+   TOUCH DEVICES
+============================================================ */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .btn:hover,
+    .memory-card:hover,
+    .envelope:hover,
+    .reason:hover {
+        transform: none;
+
+        box-shadow: initial;
+    }
+
+    .btn:active {
+        transform: scale(.97);
+    }
+
+    .memory-card:active {
+        transform: scale(.985);
+    }
+
+    .envelope:active {
+        transform:
+            scale(1.08);
+    }
+}
+
+
+/* ============================================================
+   REDUCE MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: .01ms !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ============================================================
+     HER PHOTOS
+
+     Put your photos inside:
+
+     photos/photo1.jpeg
+     photos/photo2.jpeg
+     photos/photo3.jpeg
+     ...
+     photos/photo10.jpeg
+
+     You can add/remove photos from this list.
+============================================================ -->
+
+<script>
+
+const HER_PHOTOS = [
+
+    "photos/photo1.jpeg",
+    "photos/photo2.jpeg",
+    "photos/photo3.jpeg",
+    "photos/photo4.jpeg",
+    "photos/photo5.jpeg",
+    "photos/photo6.jpeg",
+    "photos/photo7.jpeg",
+    "photos/photo8.jpeg",
+    "photos/photo9.jpeg",
+    "photos/photo10.jpeg",
+    "photos/photo11.jpeg",
+    "photos/photo12.jpeg",
+    "photos/photo13.jpeg",
+    "photos/photo14.jpeg"
+
+];
+
+</script>
+
+
+<!-- ============================================================
+     UI
+============================================================ -->
+
+<div class="progress" id="progress"></div>
+
+<div class="cursor-dot" id="cursor"></div>
+
+<canvas id="fx"></canvas>
+
+
+<!-- ============================================================
+     NAV
+============================================================ -->
+
+<nav>
+
+    <div class="logo">
+        FOR <span>HER</span> ✦
+    </div>
+
+    <div class="navlinks">
+
+        <a href="#story">Story</a>
+
+        <a href="#gallery">Photos</a>
+
+        <a href="#timeline">Chapter</a>
+
+        <a href="#letter">Letter</a>
+
+    </div>
+
+    <button
+        class="navbtn"
+        onclick="celebrate()"
+    >
+        22 ✦
+    </button>
+
+</nav>
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+
+<section class="hero">
+
+    <div
+        class="hero-photo"
+        id="heroPhoto"
+    >
+
+        <div class="ph">
+
+            📷
+
+            <br>
+            <br>
+
+            <b>HER HERO PHOTO</b>
+
+            <br>
+
+            <small>
+                Set HER_PHOTOS[0] above
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-copy">
+
+        <div class="kicker">
+            A little corner of the internet made only for her · 22
+        </div>
+
+        <h1>
+            Happy
+            <br>
+            Birthday.
+        </h1>
+
+        <p>
+            For the girl with the kindest heart,
+            the brightest smile, and a life that is
+            only just beginning to unfold.
+
+            Today isn't just another birthday.
+
+            It's <b>her chapter.</b>
+        </p>
+
+
+        <div class="hero-actions">
+
+            <button
+                class="btn dark"
+                onclick="document.querySelector('#story').scrollIntoView({behavior:'smooth'})"
+            >
+                Enter her story ↓
+            </button>
+
+            <button
+                class="btn"
+                onclick="celebrate()"
+            >
+                Make it rain ✦
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     MARQUEE
+============================================================ -->
+
+<div class="marquee">
+
+    <div class="track">
+
+        HAPPY BIRTHDAY ✦
+        CHAPTER 22 ✦
+        OUR FAVORITE GIRL ✦
+        THE NURSE WITH THE BIGGEST HEART ✦
+        MORE LIFE · MORE LAUGHTER · MORE LOVE ✦
+        HAPPY BIRTHDAY ✦
+        CHAPTER 22 ✦
+
+    </div>
+
+</div>
+
+
+<!-- ============================================================
+     STORY
+============================================================ -->
+
+<section
+    class="section reveal"
+    id="story"
+>
+
+    <div class="intro">
+
+        <div>
+
+            <div class="eyebrow">
+                01 / ABOUT HER
+            </div>
+
+            <div class="display">
+
+                A whole
+                <br>
+                world in
+                <br>
+                one person.
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <p class="bigquote">
+
+                “Some people walk into your life quietly
+                and somehow make everything feel
+                a little warmer.”
+
+            </p>
+
+            <p class="lead">
+
+                She's 22. She's a nurse.
+                She's someone who spends her days
+                looking after people — and today,
+                the spotlight belongs entirely to her.
+
+            </p>
+
+            <p class="lead">
+
+                This little website is built like
+                a digital scrapbook: a place for
+                photographs, memories, words,
+                tiny surprises and all the things
+                that are difficult to fit into one
+                birthday message.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     CHAPTER 02
+============================================================ -->
+
+<section class="section reveal">
+
+    <div class="chapter">
+
+        <div
+            class="chapter-image"
+            id="storyPhoto1"
+        >
+
+            <div class="ph">
+
+                🌸
+
+                <br>
+                <br>
+
+                HER PHOTO · 02
+
+            </div>
+
+        </div>
+
+
+        <div class="chapter-copy">
+
+            <div class="number">
+                02
+            </div>
+
+            <h2>
+                The way
+                she cares.
+            </h2>
+
+            <p>
+
+                There is something special about
+                someone whose natural instinct is
+                to help.
+
+                The long days, the patience,
+                the little acts of kindness —
+                they all say something about
+                the person she is.
+
+            </p>
+
+            <p>
+
+                But today, she doesn't need to
+                take care of everyone else.
+
+                Today she gets to be celebrated.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     CHAPTER 03
+============================================================ -->
+
+<section
+    class="section reveal"
+    style="background:#f0e3dc"
+>
+
+    <div class="chapter reverse">
+
+        <div
+            class="chapter-image"
+            id="storyPhoto2"
+        >
+
+            <div class="ph">
+
+                ✨
+
+                <br>
+                <br>
+
+                HER PHOTO · 03
+
+            </div>
+
+        </div>
+
+
+        <div class="chapter-copy">
+
+            <div class="number">
+                03
+            </div>
+
+            <h2>
+                Twenty-two.
+            </h2>
+
+            <p>
+
+                Not too young.
+                Not too old.
+
+                Just the beginning of a beautiful
+                stretch of life where there is still
+                so much to discover.
+
+            </p>
+
+            <p>
+
+                New places.
+                New people.
+                New dreams.
+                New versions of herself.
+
+                May she never feel rushed to have
+                everything figured out.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     GALLERY
+============================================================ -->
+
+<section
+    class="section polaroids reveal"
+    id="gallery"
+>
+
+    <div
+        class="head"
+        style="text-align:center;margin-bottom:55px"
+    >
+
+        <div class="eyebrow">
+            04 / HER GALLERY
+        </div>
+
+        <div class="display">
+            Moments
+            <br>
+            worth keeping.
+        </div>
+
+        <p style="color:#766b6e">
+
+            Add her photographs to the
+            <b>HER_PHOTOS</b>
+            array at the top of this file.
+
+        </p>
+
+    </div>
+
+
+    <div
+        class="wrap"
+        style="width:100%"
+    >
+
+        <div
+            class="photo-grid"
+            id="photoGrid"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     TIMELINE
+============================================================ -->
+
+<section
+    class="section reveal"
+    id="timeline"
+>
+
+    <div class="head">
+
+        <div class="eyebrow">
+            05 / CHAPTER 22
+        </div>
+
+        <div class="display">
+
+            The next
+            <br>
+            little while.
+
+        </div>
+
+        <p style="color:#766b6e">
+
+            Not predictions.
+            Just beautiful things worth wishing for.
+
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="event">
+
+            <div></div>
+
+            <div class="event-dot"></div>
+
+            <div class="event-card">
+
+                <h3>
+                    More sunsets.
+                </h3>
+
+                <p>
+
+                    More evenings where there is
+                    nowhere to rush to and enough
+                    time to enjoy the sky.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event">
+
+            <div></div>
+
+            <div class="event-dot"></div>
+
+            <div class="event-card">
+
+                <h3>
+                    More adventures.
+                </h3>
+
+                <p>
+
+                    Places she hasn't seen,
+                    food she hasn't tried and
+                    stories she hasn't collected yet.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event">
+
+            <div></div>
+
+            <div class="event-dot"></div>
+
+            <div class="event-card">
+
+                <h3>
+                    More confidence.
+                </h3>
+
+                <p>
+
+                    A year of realizing that she
+                    is capable of more than she
+                    sometimes gives herself credit for.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event">
+
+            <div></div>
+
+            <div class="event-dot"></div>
+
+            <div class="event-card">
+
+                <h3>
+                    More ordinary happiness.
+                </h3>
+
+                <p>
+
+                    Good coffee, silly conversations,
+                    comfortable silence and people
+                    who feel like home.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event">
+
+            <div></div>
+
+            <div class="event-dot"></div>
+
+            <div class="event-card">
+
+                <h3>
+                    More of her.
+                </h3>
+
+                <p>
+
+                    Less pressure to become someone else.
+
+                    More freedom to become exactly
+                    who she wants to be.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     22 REASONS
+============================================================ -->
+
+<section
+    class="section reveal"
+    style="background:#e8d6cf"
+>
+
+    <div class="head">
+
+        <div class="eyebrow">
+            06 / 22 THINGS
+        </div>
+
+        <div class="display">
+
+            Little reasons
+            <br>
+            she's special.
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="wrap reasons"
+        id="reasons"
+    ></div>
+
+</section>
+
+
+<!-- ============================================================
+     LETTER
+============================================================ -->
+
+<section
+    class="section letter-section reveal"
+    id="letter"
+>
+
+    <div class="letter">
+
+        <div
+            class="eyebrow"
+            style="color:#f1a0b2"
+        >
+            07 / A LETTER FOR HER
+        </div>
+
+
+        <h2>
+            Hey,
+            <br>
+            birthday girl.
+        </h2>
+
+
+        <p>
+            Happy 22nd birthday.
+        </p>
+
+
+        <p>
+
+            I hope this year is gentle with you.
+
+            I hope you get the kind of happiness
+            that doesn't need a reason, the kind
+            of laughter that makes your cheeks hurt,
+            and the kind of memories you can return
+            to years later.
+
+        </p>
+
+
+        <p>
+
+            You spend so much time caring for
+            other people.
+
+            I hope you never forget that you
+            deserve to be cared for, celebrated,
+            listened to and loved just as deeply.
+
+        </p>
+
+
+        <p>
+
+            Keep your softness.
+            Keep your ambition.
+            Keep your weird little habits.
+
+            Keep becoming the person you want to be.
+
+        </p>
+
+
+        <p>
+
+            And whenever you look back at 22,
+            I hope you remember how loved you were.
+
+        </p>
+
+
+        <div class="signature">
+
+            With all my love ✦
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     SECRET
+============================================================ -->
+
+<section class="secret reveal">
+
+    <div class="secret-inner">
+
+        <div class="eyebrow">
+
+            08 / ONE LAST THING
+
+        </div>
+
+
+        <div
+            class="envelope"
+            onclick="openSecret()"
+        >
+            💌
+        </div>
+
+
+        <h2>
+            Open this.
+        </h2>
+
+
+        <div
+            class="secret-message"
+            id="secretMessage"
+        >
+
+            <p>
+
+                “The world got a little more
+                beautiful the day you arrived in it.
+
+                Happy 22nd.
+
+                Now go make this year unforgettable.”
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     FINAL
+============================================================ -->
+
+<section class="final reveal">
+
+    <div
+        class="eyebrow"
+        style="color:#f1a0b2"
+    >
+        09 / THE END OF THIS PAGE
+    </div>
+
+
+    <h2>
+
+        But not
+        <br>
+        the story.
+
+    </h2>
+
+
+    <p>
+
+        This page can keep growing with
+        her photographs, inside jokes,
+        memories, letters and all the tiny
+        things that make her who she is.
+
+    </p>
+
+
+    <button
+        class="btn"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    >
+        Back to the beginning ↑
+    </button>
+
+</section>
+
+
+<!-- ============================================================
+     CELEBRATION
+============================================================ -->
+
+<div
+    class="celebration"
+    id="celebration"
+>
+
+    <div class="party p1">🎈</div>
+
+    <div class="party p2">🌸</div>
+
+    <div class="party p3">🎂</div>
+
+    <div class="party p4">💃</div>
+
+    <div class="party p5">✨</div>
+
+    <div class="party p6">🎀</div>
+
+    <div class="party p7">💖</div>
+
+    <div class="party p8">🥳</div>
+
+
+    <h2>
+
+        HAPPY
+        <br>
+        BIRTHDAY
+        <br>
+        ♥
+
+    </h2>
+
+</div>
+
+
+<!-- ============================================================
+     LIGHTBOX
+============================================================ -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox(event)"
+>
+
+    <div class="close">
+        ×
+    </div>
+
+    <img
+        id="lightboxImg"
+        alt="Full size memory"
+    >
+
+</div>
+
+
+<div
+    class="toast"
+    id="toast"
+></div>
+
+
+<script>
+
+/* ============================================================
+   PROGRESS BAR
+============================================================ */
+
+const progress = document.getElementById("progress");
+
+function updateProgress() {
+
+    const pageHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const percentage =
+        pageHeight > 0
+            ? (window.scrollY / pageHeight) * 100
+            : 0;
+
+    progress.style.width =
+        percentage + "%";
+}
+
+window.addEventListener(
+    "scroll",
+    updateProgress,
+    { passive: true }
+);
+
+
+/* ============================================================
+   DESKTOP CURSOR ONLY
+============================================================ */
+
+const cursor =
+    document.getElementById("cursor");
+
+const finePointer =
+    window.matchMedia(
+        "(hover: hover) and (pointer: fine)"
+    ).matches;
+
+if (finePointer) {
+
+    window.addEventListener(
+        "mousemove",
+        function(e) {
+
+            cursor.style.left =
+                e.clientX + "px";
+
+            cursor.style.top =
+                e.clientY + "px";
+
+        }
+    );
+
+    document
+        .querySelectorAll(
+            "button,a,.memory-card,.envelope"
+        )
+        .forEach(function(element) {
+
+            element.addEventListener(
+                "mouseenter",
+                function() {
+
+                    cursor.style.width = "28px";
+                    cursor.style.height = "28px";
+
+                }
+            );
+
+            element.addEventListener(
+                "mouseleave",
+                function() {
+
+                    cursor.style.width = "13px";
+                    cursor.style.height = "13px";
+
+                }
+            );
+
+        });
+
+}
+
+
+/* ============================================================
+   PHOTO HTML
+============================================================ */
+
+function photoHTML(
+    url,
+    index,
+    label = "HER MEMORY"
+) {
+
+    if (!url) {
+
+        return `
+            <div class="ph">
+
+                📷
+
+                <br>
+                <br>
+
+                <b>${label}</b>
+
+                <br>
+
+                <small>
+                    Add a photo in HER_PHOTOS
+                </small>
+
+            </div>
+        `;
+
+    }
+
+    return `
+        <img
+            src="${url}"
+            alt="Her birthday memory ${index + 1}"
+            loading="${index === 0 ? "eager" : "lazy"}"
+            decoding="async"
+        >
+    `;
+}
+
+
+/* ============================================================
+   GALLERY
+============================================================ */
+
+function buildGallery() {
+
+    const grid =
+        document.getElementById("photoGrid");
+
+    const items =
+        HER_PHOTOS.slice(0, 10);
+
+    const captions = [
+
+        "Her smile",
+        "A favorite memory",
+        "The little moments",
+        "Beautifully her",
+        "A day to remember",
+        "Just because",
+        "One for the scrapbook",
+        "Another chapter",
+        "Her world",
+        "Forever a favorite"
+
+    ];
+
+
+    items.forEach(function(url, i) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "memory-card" +
+            (i > 2 ? " small" : "");
+
+
+        card.innerHTML = `
+
+            <div class="photo">
+
+                ${photoHTML(
+                    url,
+                    i,
+                    "PHOTO " + (i + 1)
+                )}
+
+            </div>
+
+            <div class="caption">
+
+                ${captions[i]}
+
+            </div>
+
+            <div class="date">
+
+                chapter 22 ·
+                memory
+                ${String(i + 1).padStart(2, "0")}
+
+            </div>
+
+        `;
+
+
+        if (url) {
+
+            card.addEventListener(
+                "click",
+                function() {
+
+                    openLightbox(url);
+
+                }
+            );
+
+        }
+
+
+        grid.appendChild(card);
+
+    });
+
+
+    if (!items.length) {
+
+        grid.innerHTML = `
+
+            <div class="ph">
+
+                Add photo paths to
+                HER_PHOTOS above.
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+buildGallery();
+
+
+/* ============================================================
+   STORY PHOTOS
+============================================================ */
+
+function placeStoryPhoto(
+    id,
+    url,
+    label
+) {
+
+    if (!url) {
+        return;
+    }
+
+    const element =
+        document.getElementById(id);
+
+    element.innerHTML = `
+
+        <img
+            src="${url}"
+            alt="${label}"
+            loading="lazy"
+            decoding="async"
+        >
+
+    `;
+
+    element.addEventListener(
+        "click",
+        function() {
+
+            openLightbox(url);
+
+        }
+    );
+
+}
+
+
+placeStoryPhoto(
+    "heroPhoto",
+    HER_PHOTOS[0],
+    "Her hero photo"
+);
+
+placeStoryPhoto(
+    "storyPhoto1",
+    HER_PHOTOS[1],
+    "Her story photo"
+);
+
+placeStoryPhoto(
+    "storyPhoto2",
+    HER_PHOTOS[2],
+    "Her chapter photo"
+);
+
+
+/* ============================================================
+   22 REASONS
+============================================================ */
+
+const reasons = [
+
+    [
+        "01",
+        "Her smile",
+        "The kind that makes a normal day feel a little less normal."
+    ],
+
+    [
+        "02",
+        "Her kindness",
+        "She cares in ways that people remember."
+    ],
+
+    [
+        "03",
+        "Her strength",
+        "Softness and strength can live in the same person."
+    ],
+
+    [
+        "04",
+        "Her laugh",
+        "Some laughs deserve their own soundtrack."
+    ],
+
+    [
+        "05",
+        "Her dreams",
+        "May she always have somewhere exciting to go next."
+    ],
+
+    [
+        "06",
+        "Her heart",
+        "Probably the best thing about her."
+    ],
+
+    [
+        "07",
+        "Her ambition",
+        "There is something beautiful about someone still becoming."
+    ],
+
+    [
+        "08",
+        "Her patience",
+        "Especially after long days and long shifts."
+    ],
+
+    [
+        "09",
+        "Her energy",
+        "She brings her own atmosphere into a room."
+    ],
+
+    [
+        "10",
+        "Her courage",
+        "For every hard day she gets through."
+    ],
+
+    [
+        "11",
+        "Her honesty",
+        "No performance. Just her."
+    ],
+
+    [
+        "12",
+        "Her humor",
+        "Because life needs a little ridiculousness."
+    ],
+
+    [
+        "13",
+        "Her compassion",
+        "The reason people feel safe around her."
+    ],
+
+    [
+        "14",
+        "Her confidence",
+        "May it get louder every year."
+    ],
+
+    [
+        "15",
+        "Her curiosity",
+        "There is still so much world to explore."
+    ],
+
+    [
+        "16",
+        "Her memories",
+        "The old ones matter. The new ones matter too."
+    ],
+
+    [
+        "17",
+        "Her people",
+        "May genuine people always find their way to her."
+    ],
+
+    [
+        "18",
+        "Her future",
+        "It has so much room in it."
+    ],
+
+    [
+        "19",
+        "Her 22nd",
+        "A brand-new page."
+    ],
+
+    [
+        "20",
+        "Her journey",
+        "Every chapter brought her here."
+    ],
+
+    [
+        "21",
+        "Her presence",
+        "Sometimes just being there is enough."
+    ],
+
+    [
+        "22",
+        "Simply her",
+        "No explanation required."
+    ]
+
+];
+
+
+const reasonsGrid =
+    document.getElementById("reasons");
+
+
+reasons.forEach(function(reason) {
+
+    const card =
+        document.createElement("div");
+
+    card.className = "reason";
+
+
+    card.innerHTML = `
+
+        <span>
+            ${reason[0]}
+        </span>
+
+        <h3>
+            ${reason[1]}
+        </h3>
+
+        <p>
+            ${reason[2]}
+        </p>
+
+    `;
+
+
+    reasonsGrid.appendChild(card);
+
+});
+
+
+/* ============================================================
+   SCROLL REVEAL
+============================================================ */
+
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .12
+        }
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(function(element) {
+
+        observer.observe(element);
+
+    });
+
+
+/* ============================================================
+   SECRET MESSAGE
+============================================================ */
+
+function openSecret() {
+
+    const message =
+        document.getElementById(
+            "secretMessage"
+        );
+
+    message.classList.toggle("open");
+
+
+    if (
+        message.classList.contains("open")
+    ) {
+
+        celebrateSmall();
+
+    }
+
+}
+
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
+
+function openLightbox(url) {
+
+    const lightbox =
+        document.getElementById(
+            "lightbox"
+        );
+
+    const image =
+        document.getElementById(
+            "lightboxImg"
+        );
+
+    image.src = url;
+
+    lightbox.classList.add("open");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeLightbox(event) {
+
+    if (
+        event.target.id === "lightbox" ||
+        event.target.className === "close"
+    ) {
+
+        document
+            .getElementById("lightbox")
+            .classList.remove("open");
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+}
+
+
+/* ============================================================
+   ESC KEY FOR LIGHTBOX
+============================================================ */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            document
+                .getElementById("lightbox")
+                .classList.remove("open");
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   CONFETTI
+============================================================ */
+
+const canvas =
+    document.getElementById("fx");
+
+const ctx =
+    canvas.getContext("2d");
+
+let pieces = [];
+
+
+function sizeCanvas() {
+
+    canvas.width =
+        window.innerWidth;
+
+    canvas.height =
+        window.innerHeight;
+
+}
+
+
+sizeCanvas();
+
+
+window.addEventListener(
+    "resize",
+    sizeCanvas
+);
+
+
+function confettiPiece() {
+
+    pieces.push({
+
+        x:
+            window.innerWidth / 2 +
+            (Math.random() - .5) * 200,
+
+        y:
+            window.innerHeight * .45,
+
+        vx:
+            (Math.random() - .5) * 16,
+
+        vy:
+            -Math.random() * 13 - 2,
+
+        g: .28,
+
+        s:
+            3 +
+            Math.random() * 6,
+
+        life:
+            80 +
+            Math.random() * 80,
+
+        h:
+            Math.random() * 360,
+
+        r:
+            Math.random() * 6
+
+    });
+
+}
+
+
+function animate() {
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    pieces =
+        pieces.filter(
+            p => p.life > 0
+        );
+
+
+    for (const p of pieces) {
+
+        p.x += p.vx;
+
+        p.y += p.vy;
+
+        p.vy += p.g;
+
+        p.life--;
+
+        p.r += .15;
+
+
+        ctx.save();
+
+        ctx.translate(
+            p.x,
+            p.y
+        );
+
+        ctx.rotate(p.r);
+
+        ctx.globalAlpha =
+            p.life / 100;
+
+        ctx.fillStyle =
+            `hsl(
+                ${p.h},
+                75%,
+                62%
+            )`;
+
+        ctx.fillRect(
+            -p.s / 2,
+            -p.s / 2,
+            p.s * 2,
+            p.s
+        );
+
+        ctx.restore();
+
+    }
+
+
+    requestAnimationFrame(
+        animate
+    );
+
+}
+
+animate();
+
+
+/* ============================================================
+   SMALL CELEBRATION
+============================================================ */
+
+function celebrateSmall() {
+
+    for (
+        let i = 0;
+        i < 30;
+        i++
+    ) {
+
+        confettiPiece();
+
+    }
+
+}
+
+
+/* ============================================================
+   FULL CELEBRATION
+============================================================ */
+
+function celebrate() {
+
+    const celebration =
+        document.getElementById(
+            "celebration"
+        );
+
+
+    celebration.classList.add(
+        "active"
+    );
+
+
+    /*
+       Reduce the number of pieces
+       on smaller phones for smoother
+       performance.
+    */
+
+    const amount =
+        window.innerWidth <= 430
+            ? 160
+            : 260;
+
+
+    for (
+        let i = 0;
+        i < amount;
+        i++
+    ) {
+
+        setTimeout(
+            confettiPiece,
+            i * 3
+        );
+
+    }
+
+
+    toast(
+        "Chapter 22 is officially celebrating ✦"
+    );
+
+
+    setTimeout(
+        function() {
+
+            celebration.classList.remove(
+                "active"
+            );
+
+        },
+        9000
+    );
+
+}
+
+
+/* ============================================================
+   TOAST
+============================================================ */
+
+function toast(message) {
+
+    const element =
+        document.getElementById(
+            "toast"
+        );
+
+
+    element.textContent =
+        message;
+
+
+    element.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        window._toastTimer
+    );
+
+
+    window._toastTimer =
+        setTimeout(
+            function() {
+
+                element.classList.remove(
+                    "show"
+                );
+
+            },
+            2600
+        );
+
+}
+
+
+/* ============================================================
+   PREVENT IOS DOUBLE-TAP ZOOM ON BUTTONS
+============================================================ */
+
+document
+    .querySelectorAll("button")
+    .forEach(function(button) {
+
+        button.addEventListener(
+            "touchend",
+            function() {
+
+                button.blur();
+
+            },
+            { passive: true }
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
+```
